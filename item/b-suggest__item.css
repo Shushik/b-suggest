@@ -1,0 +1,13 @@
+.b-suggest__item
+{
+    font-family: Verdana, sans-serif;
+    font-size:   10px;
+
+    line-height: 12px;
+
+    cursor: pointer;
+
+    padding: 3px;
+
+    border: transparent solid 1px;
+}

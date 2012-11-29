@@ -1,0 +1,16 @@
+.b-suggest
+{
+    display:  none;
+    position: absolute;
+    z-index:  3;
+
+    max-height: 300px;
+    overflow:   auto;
+
+    background: #424242;
+    border:     #5B5F62 solid 1px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}

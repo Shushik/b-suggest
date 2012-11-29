@@ -1,0 +1,5 @@
+.b-suggest{display:none;position:absolute;z-index:3;max-height:300px;overflow:auto;background:#424242;border:#5B5F62 solid 1px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.b-suggest_is_visible{display:block}
+.b-suggest__title{font-size:14px;line-height:16px;padding:5px 3px;color:#A8A779}
+.b-suggest__item{font-family:Verdana,sans-serif;font-size:10px;line-height:12px;cursor:pointer;padding:3px;border:transparent solid 1px}
+.b-suggest__item:hover,.b-suggest__item_is_hovered{background:#5B5F62}

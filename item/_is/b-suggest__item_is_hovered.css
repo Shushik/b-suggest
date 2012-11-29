@@ -1,0 +1,5 @@
+.b-suggest__item:hover,
+.b-suggest__item_is_hovered
+{
+    background:   #5B5F62;
+}
