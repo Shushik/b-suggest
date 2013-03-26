@@ -1,11 +1,11 @@
-;Affota._modules.suggest = (function() {
+;Suggest = (function() {
 
 
     /**
-     * @page        http://github.com/Shushik/b-suggest/
+     * Simple suggest module
+     *
      * @author      Shushik <silkleopard@yandex.ru>
      * @version     1.0
-     * @description a simple javascript suggest
      *
      * @constructor
      *
@@ -405,6 +405,13 @@
 
             //
             this._events.push(this._bind(
+                document,
+                'touchstart',
+                this._proxy(this._click4document, this)
+            ));
+
+            //
+            this._events.push(this._bind(
                 nodes.field,
                 'blur',
                 this._proxy(this._blur4field, this)
@@ -449,6 +456,13 @@
             this._events.push(this._bind(
                 this._nodes.block,
                 'click',
+                this._proxy(this._click4block, this)
+            ));
+
+            // Mouseclick on list item
+            this._events.push(this._bind(
+                this._nodes.block,
+                'touchstart',
                 this._proxy(this._click4block, this)
             ));
         },
@@ -695,23 +709,7 @@
          * @return {undefined}
          */
         _blur4field : function(event) {
-            var
-                self = this;
-
-            if (this._timer) {
-                clearTimeout(this._timer);
-            }
-
-            if (this.shown && !event.target.className.match('b-suggest')) {
-                this._timer = setTimeout(
-                    function() {
-                        self._aborted = true;
-
-                        self.hide();
-                    },
-                    300
-                );
-            }
+            this.hide();
         },
         /**
          * Enter the results by enter the press
